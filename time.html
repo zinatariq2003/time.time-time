@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مؤقت التركيز والمهام</title>
+    <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>مؤقت التركيز الذكي</h1>
+        
+        <div class="task-input">
+            <input type="text" id="taskName" placeholder="اسم المهمة...">
+            <input type="number" id="taskDuration" placeholder="الدقائق" min="1">
+            <button onclick="addTask()">إضافة مهمة</button>
+        </div>
+
+        <div id="active-timer" class="timer-display">
+            <h2 id="current-task-title">لا توجد مهمة نشطة</h2>
+            <div id="time-left">00:00</div>
+            <button id="start-btn" disabled onclick="startTimer()">بدأ التركيز</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- صوت التنبيه -->
+    <audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+    <script src="sscript.js"></script>
+</body>
+</html>
